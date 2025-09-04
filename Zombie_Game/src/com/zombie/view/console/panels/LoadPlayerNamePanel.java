@@ -22,7 +22,7 @@ public class LoadPlayerNamePanel implements IPanel {
             String input = raw == null ? "" : raw.trim();
             
             if (input.isEmpty()) {
-                wiewAdministrator.showErrorMessage("Debes ingresar un nombre.");
+                wiewAdministrator.showErrorMessage("You must enter a name.");
             } else {
             	
             	frame.appendLine("> " + input);
@@ -38,9 +38,9 @@ public class LoadPlayerNamePanel implements IPanel {
     }
     
     private void getPanel() {
-    	frame.appendLine("=== CARGAR NOMBRE DE JUGADOR ===");
+    	frame.appendLine("=== LOAD PLAYER'S NAME ===");
         frame.appendLine("");
-        frame.appendLine("Ingrese el nombre del jugador:");
+        frame.appendLine("Enter the player name:");
 	}
     
 	@Override

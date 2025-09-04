@@ -33,7 +33,7 @@ public class PersistedGamePlayersNamesPanel implements IPanel {
 			String input = raw == null ? "" : raw.trim();
 	
 			if (input.isEmpty()) {
-				viewAdministrator.showErrorMessage("Debes ingresar una opción.");
+				viewAdministrator.showErrorMessage("You must enter an option.");
 			} else {
 	            
 				frame.appendLine("> " + input);
@@ -45,11 +45,11 @@ public class PersistedGamePlayersNamesPanel implements IPanel {
 					if((opcion >= 1) && (opcion <= playersQuantity)) {
 						viewAdministrator.getDataPersistedGamePlayers(persistedGamePlayers.get(opcion - 1).getId());
 					} else {
-						viewAdministrator.showErrorMessage("Opción inválida. Elige entre 1 y " + playersQuantity);
+						viewAdministrator.showErrorMessage("Invalid option. Choose between 1 and " + playersQuantity);
 					}		
 		                
 				} catch (NumberFormatException ex) {
-					viewAdministrator.showErrorMessage("Formato inválido: ingresa un número.");
+					viewAdministrator.showErrorMessage("Invalid format: enter a number.");
 				}
 	             
 			}
@@ -61,16 +61,16 @@ public class PersistedGamePlayersNamesPanel implements IPanel {
         
     private void getPanel() {
     	int playerIndex = 1;
-    	frame.appendLine("=== NOMBRES JUGADORES PARTIDA GUARDADA ===");
+    	frame.appendLine("=== PAUSED GAME PLAYERS NAMES ===");
         frame.appendLine("");
         frame.appendLine("");
         for(PlayerDTO player: persistedGamePlayers) {
-        	frame.appendLine("Jugador " + playerIndex + ": " + player.getName());
+        	frame.appendLine("Player " + playerIndex + " : " + player.getName());
         	playerIndex ++;
         }
         frame.appendLine("");
         frame.appendLine("");
-		frame.appendLine("Elija el jugador a recuperar (Entre 1 y " + playersQuantity + "):");
+		frame.appendLine("Choose the player to recover (Between 1 and " + playersQuantity + "):");
 	}
     
 	@Override

@@ -29,13 +29,13 @@ public class PersistedGamePanel implements IPanel {
     }
         
     private void getPanel() {
-    	frame.appendLine("=== PARTIDA PAUSADA ===");
+    	frame.appendLine("=== GAME PAUSED ===");
         frame.appendLine("");
         frame.appendLine("");
-        frame.appendLine("El jugador : " + playerName + " pauso la partida");
+        frame.appendLine("The player : " + playerName + " paused the game.");
         frame.appendLine("");
         frame.appendLine("");
-		frame.appendLine("Presione Enter para ir al menu principal:");
+		frame.appendLine("Press Enter to go to the main menu:");
 	}
     
 	@Override

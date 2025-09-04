@@ -36,21 +36,21 @@ public class SpectatorPlayerPanel implements IPanel {
     }
         
     private void getPanel() {
-    	frame.appendLine("=== JUGADOR OBSERVADOR ===");
+    	frame.appendLine("=== SPECTATOR PLAYER ===");
         frame.appendLine("");
-        frame.appendLine("Turno del jugador: " + actualPlayerName);
+        frame.appendLine("Player's turn: " + actualPlayerName);
         frame.appendLine("");
         frame.appendLine("");
         if(!couplesDeck.isEmpty()) {
-        	frame.appendLine("Mazo parejas: " + couplesDeck.get(0).toString() + ", " + couplesDeck.get(1).toString() + "");
+        	frame.appendLine("Couples deck: " + couplesDeck.get(0).toString() + ", " + couplesDeck.get(1).toString() + "");
         } else {
-        	frame.appendLine("Mazo parejas: No hay cartas");
+        	frame.appendLine("Couples deck: there're no cards");
         }
         frame.appendLine("");
         frame.appendLine("");
-        frame.appendLine("Cartas jugador: " + playerDeck);
+        frame.appendLine("Player's deck: " + playerDeck);
         frame.appendLine("");
-        frame.appendLine("Espere su turno para jugar");
+        frame.appendLine("Wait your turn to play");
 	}
     
 	@Override

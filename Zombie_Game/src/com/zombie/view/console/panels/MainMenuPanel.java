@@ -28,7 +28,7 @@ public class MainMenuPanel implements IPanel {
 			 String input = raw == null ? "" : raw.trim();
 	
 			 if (input.isEmpty()) {
-				 viewAdministrator.showErrorMessage("Debes ingresar una opción.");
+				 viewAdministrator.showErrorMessage("You must enter an option.");
 			 } else {
 	            
 				 frame.appendLine("> " + input);
@@ -41,7 +41,7 @@ public class MainMenuPanel implements IPanel {
 						 	case 1 -> viewAdministrator.startGame();
 							case 0 -> viewAdministrator.quitGame();
 			                default -> {
-			                	viewAdministrator.showErrorMessage("Opción inválida. Elige 1 o 0.");    
+			                	viewAdministrator.showErrorMessage("Invalid option. Choose 1 or 0.");    
 			                }
 			             }
 					 } else {
@@ -50,13 +50,13 @@ public class MainMenuPanel implements IPanel {
 						 	case 2 -> viewAdministrator.continuePersistedGame();
 						 	case 0 -> viewAdministrator.quitGame();
 		                    default -> {
-		                    	viewAdministrator.showErrorMessage("Opción inválida. Elige 1, 2 o 0.");	  
+		                    	viewAdministrator.showErrorMessage("Invalid option. Choose 1, 2 or 0.");	  
 		                    }
 						 }						 
 					 }
 	                
 				 } catch (NumberFormatException ex) {
-					 viewAdministrator.showErrorMessage("Formato inválido: ingresa un número.");
+					 viewAdministrator.showErrorMessage("Invalid format: Enter a number.");
 				 }
 	            
 			 }
@@ -67,14 +67,14 @@ public class MainMenuPanel implements IPanel {
 	 }
 	
 	 private void getPanel() {
-		 frame.appendLine("=== BIENVENIDO A ZOMBIE ===");
-		 frame.appendLine("1) Iniciar Juego");
+		 frame.appendLine("=== ZOMBIE GAME ===");
+		 frame.appendLine("1) Start game");
 		 if(isPersistedGame) {
-			 frame.appendLine("2) Continuar partida"); 
+			 frame.appendLine("2) Continue game"); 
 		 } 
-		 frame.appendLine("0) Salir");
+		 frame.appendLine("0) Quit");
 		 frame.appendLine("");
-		 frame.appendLine("Elija una opción y presione Enter:");		
+		 frame.appendLine("Choose an option and press Enter:");		
 	 }
 		
 	 @Override

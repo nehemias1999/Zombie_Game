@@ -23,9 +23,9 @@ public class WaitingPlayersPanel implements IPanel {
     }
 			
     private void obtenerPanel() {
-    	frame.appendLine("=== ESPERANDO JUGADORES ===");
+    	frame.appendLine("=== WAITING PLAYERS ===");
         frame.appendLine("");
-        frame.appendLine("Esperando jugadores...");
+        frame.appendLine("Waiting players...");
         frame.appendLine("");
 	}
 	

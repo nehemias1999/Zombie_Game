@@ -29,13 +29,13 @@ public class EndOfRoundPanel implements IPanel {
     }
         
     private void getPanel() {
-    	frame.appendLine("=== FIN DEL JUEGO ===");
+    	frame.appendLine("=== END OF GAME ===");
         frame.appendLine("");
         frame.appendLine("");
-        frame.appendLine("Jugador perdedor: " + lostPlayerName);
+        frame.appendLine("Lost player: " + lostPlayerName);
         frame.appendLine("");
         frame.appendLine("");
-		frame.appendLine("Presione Enter para ir al menu principal:");
+		frame.appendLine("Press Enter to go to the main menu:");
 	}
     
 	@Override

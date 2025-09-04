@@ -37,7 +37,7 @@ public class TurnPlayerPanel implements IPanel {
             String input = raw == null ? "" : raw.trim();
             
             if (input.isEmpty()) {
-                viewAdministrator.showErrorMessage("Debes ingresar una carta a elegir del jugador de la derecha.");
+                viewAdministrator.showErrorMessage("You must enter a card of the player's choice on your right.");
             } else {
             	
             	frame.appendLine("> " + input);
@@ -51,11 +51,11 @@ public class TurnPlayerPanel implements IPanel {
             		if((opcion >= 1) && (opcion <= rightPlayerCardsQuantity)) {
             			viewAdministrator.getDataTurnPlayer(input);
             		} else {
-                        viewAdministrator.showErrorMessage("Opción inválida. Elige entre y " + rightPlayerCardsQuantity);
+                        viewAdministrator.showErrorMessage("Invalid option. Choose between and " + rightPlayerCardsQuantity);
             		}            		
                                		
             	} catch (NumberFormatException ex) {
-					 viewAdministrator.showErrorMessage("Formato inválido: ingresa un número.");
+					 viewAdministrator.showErrorMessage("Invalid format: Please enter a number.");
 				}
                 
             }
@@ -66,21 +66,21 @@ public class TurnPlayerPanel implements IPanel {
     }
         
     private void getPanel() {
-    	frame.appendLine("=== TURNO JUGADOR === (Ingrese 0 para pausar la partida)");
+    	frame.appendLine("=== PLAYER'S TURN === (Enter 0 to pause the game)");
         frame.appendLine("");
-        frame.appendLine("Turno del jugador: " + actualPlayerName);
+        frame.appendLine("Player's turn: " + actualPlayerName);
         frame.appendLine("");
         frame.appendLine("");
         if(!couplesDeck.isEmpty()) {
-        	frame.appendLine("Mazo parejas: " + couplesDeck.get(0).toString() + ", " + couplesDeck.get(1).toString() + "");
+        	frame.appendLine("Couples deck: " + couplesDeck.get(0).toString() + ", " + couplesDeck.get(1).toString() + "");
         } else {
-        	frame.appendLine("Mazo parejas: No hay cartas");
+        	frame.appendLine("Couples deck: there're no cards");
         }
         frame.appendLine("");
         frame.appendLine("");
-        frame.appendLine("Cartas jugador: " + playerDeck);
+        frame.appendLine("Player's deck: " + playerDeck);
         frame.appendLine("");
-        frame.appendLine("Ingrese un numero de la carta a obtener del jugador derecho: (Entre 1 y " + rightPlayerCardsQuantity + ")");
+        frame.appendLine("Enter a number of the card to be obtained from the right player: (Between 1 and " + rightPlayerCardsQuantity + ")");
 	}
     
 	@Override

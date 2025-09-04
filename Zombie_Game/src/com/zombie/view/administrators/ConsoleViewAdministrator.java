@@ -54,15 +54,15 @@ public class ConsoleViewAdministrator implements IView {
 		persistedGamePlayersNamesPanel = new PersistedGamePlayersNamesPanel(this, mainFrame);
 		
 		addPanel("Main Menu Panel", mainMenuPanel);
-		addPanel("Definir Cantidad de Jugadores", definePlayersQuantityPanel);
-		addPanel("Espera Jugadores", waitingPlayerPanel);
-		addPanel("Carga Nombre de Jugador", loadPlayerNamePanel);
-		addPanel("Nombres Jugadores Cargados", loadedPlayersNamesPanel);
-		addPanel("Jugador Turno", turnPlayerPanel);
-		addPanel("Jugador Observador", spectatorPlayerPanel);
-		addPanel("Final de Ronda", endOfRoundPanel);
-		addPanel("Partida Persistida", persistedGamePanel);				
-		addPanel("Nombres Jugadores Partida Persistida", persistedGamePlayersNamesPanel);		
+		addPanel("Define Players Quantity Panel", definePlayersQuantityPanel);
+		addPanel("Waiting Player Panel", waitingPlayerPanel);
+		addPanel("Load Player Name Panel", loadPlayerNamePanel);
+		addPanel("Loaded Players Names Panel", loadedPlayersNamesPanel);
+		addPanel("Turn Player Panel", turnPlayerPanel);
+		addPanel("Spectator Player Panel", spectatorPlayerPanel);
+		addPanel("End Of Round Panel", endOfRoundPanel);
+		addPanel("Persisted Game Panel", persistedGamePanel);				
+		addPanel("Persisted Game Players Names Panel", persistedGamePlayersNamesPanel);		
 		
 		showFrame();
 							        
@@ -118,7 +118,7 @@ public class ConsoleViewAdministrator implements IView {
 	
 	@Override
 	public void showDefinePlayersQuantityPanel() {
-		showPanel("Definir Cantidad de Jugadores");
+		showPanel("Define Players Quantity Panel");
 	}
 	
 	@Override
@@ -128,12 +128,12 @@ public class ConsoleViewAdministrator implements IView {
 	
 	@Override
 	public void showWaitingPlayersPanel() {
-		showPanel("Espera Jugadores");
+		showPanel("Waiting Player Panel");
 	}
 	
 	@Override
 	public void showLoadPlayerPanel() {
-		showPanel("Carga Nombre de Jugador");
+		showPanel("Load Player Name Pane");
 	}
 	
 	@Override
@@ -143,7 +143,7 @@ public class ConsoleViewAdministrator implements IView {
 		
 	@Override
 	public void showLoadedPlayersPanel() {
-		showPanel("Nombres Jugadores Cargados");
+		showPanel("Loaded Players Names Panel");
 	}
 	
 	@Override
@@ -158,12 +158,12 @@ public class ConsoleViewAdministrator implements IView {
 			
 	@Override
 	public void showTurnPlayerPanel() {
-		showPanel("Jugador Turno");
+		showPanel("Turn Player Panel");
 	}
 	
 	@Override
 	public void showSpectatorPlayerPanel() {
-		showPanel("Jugador Observador");
+		showPanel("Spectator Player Panel");
 	}
 	
 	@Override
@@ -193,7 +193,7 @@ public class ConsoleViewAdministrator implements IView {
 	
 	@Override
 	public void showEndRoundPanel() {
-		showPanel("Final de Ronda");
+		showPanel("End Of Round Panel");
 	}
 	
 	@Override
@@ -217,7 +217,7 @@ public class ConsoleViewAdministrator implements IView {
 	
 	@Override
 	public void showPersistGamePanel() {
-		showPanel("Partida Persistida");
+		showPanel("Persisted Game Panel");
 	}
 	
 	@Override
@@ -232,7 +232,7 @@ public class ConsoleViewAdministrator implements IView {
 	
 	@Override
 	public void showPersistedGamePlayersNamesPanel() {
-		showPanel("Nombres Jugadores Partida Persistida");
+		showPanel("Persisted Game Players Names Panel");
 	}
 		
 	@Override

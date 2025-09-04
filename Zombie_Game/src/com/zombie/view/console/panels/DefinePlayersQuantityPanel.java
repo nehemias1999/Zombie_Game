@@ -22,7 +22,7 @@ public class DefinePlayersQuantityPanel implements IPanel {
             String input = raw == null ? "" : raw.trim();
             
             if (input.isEmpty()) {
-                viewAdministrator.showErrorMessage("Debes ingresar un número.");
+                viewAdministrator.showErrorMessage("You must enter a number.");
             } else {
             	
             	frame.appendLine("> " + input);
@@ -34,11 +34,11 @@ public class DefinePlayersQuantityPanel implements IPanel {
                     if (opcion >= 2 && opcion <= 4) {
                     	viewAdministrator.getDataDefinePlayersQuantity(input);
                     } else {
-                        viewAdministrator.showErrorMessage("Opción inválida. Debe ser entre 2 y 4.");
+                        viewAdministrator.showErrorMessage("Invalid option. Must be between 2 and 4.");
                     }
                     
                 } catch (NumberFormatException ex) {
-                    viewAdministrator.showErrorMessage("Debe ingresar un número válido.");
+                    viewAdministrator.showErrorMessage("You must enter a valid number.");
                 }
                 
             }
@@ -50,9 +50,9 @@ public class DefinePlayersQuantityPanel implements IPanel {
     }
     
     private void getPanel() {
-    	frame.appendLine("=== CANTIDAD DE JUGADORES ===");
+    	frame.appendLine("=== QUANTITY OF PLAYERS ===");
         frame.appendLine("");
-        frame.appendLine("Elija la cantidad de jugadores a jugar (entre 2 y 4):");	
+        frame.appendLine("Choose the number of players to play (between 2 and 4):");	
 	}
     
 	@Override

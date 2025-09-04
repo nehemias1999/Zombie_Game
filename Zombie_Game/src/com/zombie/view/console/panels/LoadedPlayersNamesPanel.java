@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.zombie.interfaces.IPanel;
 import com.zombie.interfaces.IView;
+import com.zombie.model.dto.PlayerDTO;
 import com.zombie.view.console.MainJFrame;
 
 
@@ -32,15 +33,17 @@ public class LoadedPlayersNamesPanel implements IPanel {
     }
         
     private void getPanel() {
-    	frame.appendLine("=== JUGADORES CARGADOS ===");
+    	int playerIndex = 1;
+    	frame.appendLine("=== LOADED PLAYERS ===");
         frame.appendLine("");
         frame.appendLine("");
-        for(String nombreJugador: playersNames) {;
-        	frame.appendLine("Jugador: " + nombreJugador);
+        for(String playerName: playersNames) {
+        	frame.appendLine("Player " + playerIndex + ": " + playerName);
+        	playerIndex ++;
         }
         frame.appendLine("");
         frame.appendLine("");
-		frame.appendLine("Presione Enter para comenzar la partida:");
+		frame.appendLine("Press Enter to start the game:");
 	}
     
 	@Override
