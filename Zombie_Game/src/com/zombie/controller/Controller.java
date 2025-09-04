@@ -90,7 +90,7 @@ public class Controller implements IController, IControladorRemoto {
 		try {
 			
 			if(playersQuantity == null || playersQuantity.isBlank()) {
-				view.showErrorMessage("La cantidad de jugadores no puede ser vacia");
+				view.showErrorMessage("The number of players cannot be empty");
 				return;
 			}			
 			
@@ -101,12 +101,12 @@ public class Controller implements IController, IControladorRemoto {
 			PlayerEvent playerEvent = message.get("PlayerEvent", PlayerEvent.class);
 			 
 			if(playerEvent == PlayerEvent.ERROR_MINIMUM_PLAYERS_LIMIT) {
-				view.showErrorMessage("La cantidad de jugadores debe ser mayor a " + getMinimumNumberPlayer());
+				view.showErrorMessage("The number of players must be greater than " + getMinimumNumberPlayer());
 				return;
 			}
 			
 			if(playerEvent == PlayerEvent.ERROR_MAXIMUM_PLAYERS_LIMIT) {
-				view.showErrorMessage("La cantidad de jugadores debe ser manor a " + getMaximumNumberPleyer());
+				view.showErrorMessage("The number of players must be less than " + getMaximumNumberPleyer());
 				return;
 			}
 			
@@ -115,7 +115,7 @@ public class Controller implements IController, IControladorRemoto {
 			}
 			
 		} catch (NumberFormatException e) {
-			view.showErrorMessage("Numero ingresado invalido");
+			view.showErrorMessage("Invalid number entered");
 		} catch(RemoteException e) {
 			view.showErrorMessage("Error: Remote Exception " + e.getMessage());
 		}
@@ -136,7 +136,7 @@ public class Controller implements IController, IControladorRemoto {
 		try {
 			
 			if(playerName == null || playerName.isBlank()) {
-				view.showErrorMessage("El nombre no puede estar vacio");
+				view.showErrorMessage("The name cannot be empty");
 				return;
 			}			
 						
@@ -145,12 +145,12 @@ public class Controller implements IController, IControladorRemoto {
 			PlayerEvent playerEvent = message.get("PlayerEvent", PlayerEvent.class);
 			
 			if(playerEvent == PlayerEvent.ERROR_MAXIMUM_PLAYERS_LIMIT) {
-				view.showErrorMessage("No se pueden ingresar mas jugadores");
+				view.showErrorMessage("No more players can enter");
 				return;
 			}
 			
 			if(playerEvent == PlayerEvent.ERROR_PLAYER_VALIDATION) {
-				view.showErrorMessage("El nombre ingresado no es valido");
+				view.showErrorMessage("The name entered is not valid");
 				return;
 			}
 			
@@ -255,7 +255,7 @@ public class Controller implements IController, IControladorRemoto {
 					.toList();
 
 		} catch(NoSuchElementException e) {
-			view.showErrorMessage("Error: No se encontro el usuario solicitado");
+			view.showErrorMessage("The requested user was not found");
 			return List.of();
 		} catch(RemoteException e) {
 			view.showErrorMessage("Error: Remote Exception " + e.getMessage());
@@ -278,7 +278,7 @@ public class Controller implements IController, IControladorRemoto {
 		try {
 			
 			if(indexRightPlayerCardDeck == null || indexRightPlayerCardDeck.isBlank()) {
-				view.showErrorMessage("El indice de la carta elegida no puede ser vacia");
+				view.showErrorMessage("The index of the chosen card cannot be empty");
 				return;
 			}	
 			
@@ -287,7 +287,7 @@ public class Controller implements IController, IControladorRemoto {
 			model.getRightPlayerCard(index);
 						
 		} catch (NumberFormatException e) {
-			view.showErrorMessage("Numero ingresado invalido");	
+			view.showErrorMessage("Invalid number entered");	
 		} catch(RemoteException e) {
 			view.showErrorMessage("Error: Remote Exception " + e.getMessage());
 		}
@@ -397,7 +397,7 @@ public class Controller implements IController, IControladorRemoto {
 		try {
 			
 			if(id == null) {
-				view.showErrorMessage("El identificador no puede estar vacio");
+				view.showErrorMessage("The identifier cannot be empty");
 				return;
 			}			
 						
