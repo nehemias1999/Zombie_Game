@@ -264,10 +264,10 @@ public class Model extends ObservableRemoto implements IModel, Serializable {
 	}
 	
 	private int rightPlayerPosition() {
-    	int rightPlayerPosition = ((actualPlayerPosition - 1) != -1)? (actualPlayerPosition - 1): (actualPlayerPosition - 1);
+    	int rightPlayerPosition = ((actualPlayerPosition - 1) != -1)? (actualPlayerPosition- 1): (actualPlayersQuantity - 1);
     	
     	while(!players.get(rightPlayerPosition).isActive()) {
-    		rightPlayerPosition = ((actualPlayerPosition - 1) != -1)? (actualPlayerPosition - 1): (actualPlayerPosition - 1);
+    		rightPlayerPosition = ((actualPlayerPosition - 1) != -1)? (actualPlayerPosition - 1): (actualPlayersQuantity - 1);
     	}
     	
         return rightPlayerPosition;

@@ -10,7 +10,7 @@ import ar.edu.unlu.rmimvc.servidor.Servidor;
 public class ServerApp {
 	
 	private static final String SERVER_IP = "127.0.0.1";
-	private static final Integer SERVER_PORT = 9999;
+	private static final Integer SERVER_PORT = 10000;
 
 	public static void main(String[] args) {
 		
@@ -28,4 +28,3 @@ public class ServerApp {
 	}
 
 }
-

@@ -14,19 +14,19 @@ import ar.edu.unlu.rmimvc.cliente.Cliente;
 public class ClientApp {
 	
 	private static final String SERVER_IP = "127.0.0.1";
-	private static final Integer SERVER_PORT = 9999;
+	private static final Integer SERVER_PORT = 10000;
 	private static final String CLIENT_IP = "127.0.0.1";
 	
 	public static void main(String[] args) throws RemoteException {
 
 		String clientPort = (String) JOptionPane.showInputDialog(
 			null, 
-			"Seleccione el puerto en el que escuchar� peticiones el cliente", 
-			"Puerto del cliente", 
+			"Select the port on which the client will listen for requests", 
+			"Client port", 
 			JOptionPane.QUESTION_MESSAGE,
 			null,
 			null,
-			9998
+			10001
 		);
 				
 		Controller controller = new Controller();
@@ -45,7 +45,7 @@ public class ClientApp {
         try {
             c.iniciar(controller);
         } catch (RMIMVCException e) {
-            e.printStackTrace();
+        	System.out.println("Server connection error: " + e.getMessage());
             return;
         }
 

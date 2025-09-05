@@ -133,7 +133,7 @@ public class ConsoleViewAdministrator implements IView {
 	
 	@Override
 	public void showLoadPlayerPanel() {
-		showPanel("Load Player Name Pane");
+		showPanel("Load Player Name Panel");
 	}
 	
 	@Override
